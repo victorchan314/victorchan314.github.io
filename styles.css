@@ -26,3 +26,8 @@ body {
     margin-top: 10%;
     float: right;
 }
+
+#resumeicon {
+    height: 34px;
+    padding-left: 8px;
+}
