@@ -1,5 +1,9 @@
 body {
-    background-color:black;
-    color:white;
-    font-family:Arial;
+    background-color: black;
+    color: white;
+    font-family: Arial;
+}
+
+.container-fluid {
+    height: 100%;
 }
