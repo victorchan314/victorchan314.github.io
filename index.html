@@ -17,26 +17,32 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+        <link rel="stylesheet" type="text/css" href="styles.css">
+
     </head>
 
 
-    <body style="background-color:black;color:white;font-family:Arial;">
+    <body>
 
         <div class="container-fluid">
 
-            <div id="left" style="width:50%;float:left;">
-                <img height=80% style="margin-top:10%;float:right;" src="Victor.jpg">
-            </div>
+            <div class="main row">
+
+                <div id="left" class="col-md-6">
+                    <img id="portrait" src="img/Victor.jpg">
+                </div>
     
-            <div id="right" style="width:50%;float:left;padding-top:5%;">
-                <center><h1>Victor Chan</h1></center>
-                <center>
-                    <div>
-                        <a target="_blank" href="https://www.linkedin.com/in/victorchan314"><img src="In-2C-34px-R.png"></a>
-                        <a target="_blank" href="https://www.github.com/victorchan314"><img src="GitHub-Mark-Light-32px.png"></a>
-                        <a target="_blank" href="Resume.pdf"><img src="resumeIcon.jpg" height="34px" style="padding-left:8px;"></a>
-                    </div>
-                </center>
+                <div id="right" class="col-md-6" style="padding-top:5%;">
+                    <center><h1>Victor Chan</h1></center>
+                    <center>
+                        <div>
+                            <a id="linkedin" target="_blank" href="https://www.linkedin.com/in/victorchan314"><img id="linkedinicon" src="img/In-2C-34px-R.png"></a>
+                            <a id="github" target="_blank" href="https://www.github.com/victorchan314"><img id="githubicon" src="img/GitHub-Mark-Light-32px.png"></a>
+                            <a id="resume" target="_blank" href="Resume.pdf"><img id="resumeicon" src="img/resumeIcon.jpg"></a>
+                        </div>
+                    </center>
+                </div>
+
             </div>
 
         </div>
