@@ -8,10 +8,16 @@ body {
     height: 100%;
 }
 
-.main.row {
+.main {
     height: 100%;
 }
 
 #left {
     height: 100%;
+}
+
+#portrait {
+    height: 50%;
+    margin-top: 10%;
+    float: right;
 }
