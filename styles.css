@@ -6,6 +6,7 @@ body {
     background-color: black;
     color: white;
     font-family: Arial;
+    font-size: 14px;
     height: 100%;
 }
 
@@ -25,6 +26,11 @@ body {
     height: 80%;
     margin-top: 10%;
     float: right;
+}
+
+#right {
+    height: 100%;
+    padding: 0px 50px;
 }
 
 #resumeicon {
