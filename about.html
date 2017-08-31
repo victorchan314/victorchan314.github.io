@@ -25,8 +25,10 @@
 
         <script>
             $(function(){
-                $("#navbarspace").load("navbar.html");
-                $("#about").addClass("active");
+                $("#navbarspace").load("navbar.html", function() {
+                    $(".navbar-nav li").removeClass("active");
+                    $("#about").addClass("active");
+                });
             });
         </script>
 
