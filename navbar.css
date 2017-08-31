@@ -1,0 +1,32 @@
+.navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size:18px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.navbar-inverse {
+    background-color: black !important;
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar-header a {
+    color: white !important;
+}
+
+.navbar-header a:hover {
+    color: #DDDDDD !important;
+}
+
+.navbar-nav li a {
+    color: white !important;
+}
+
+.navbar-nav li a:hover {
+    color: #DDDDDD !important;
+}
