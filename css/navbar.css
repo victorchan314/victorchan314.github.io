@@ -30,3 +30,10 @@
 .navbar-nav li a:hover {
     color: #DDDDDD !important;
 }
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+    background-color: #383838 !important;
+    color: #E4E4E4 !important;
+}
