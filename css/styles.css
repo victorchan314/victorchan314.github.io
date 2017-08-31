@@ -10,6 +10,26 @@ body {
     height: 100%;
 }
 
+a:link {
+    color: blue;
+    underline: none;
+}
+
+a:visited {
+    color: blue;
+    underline: none;
+}
+
+a:hover {
+    color: #BDCEFF;
+    underline: none;
+}
+
+a:active {
+    color: #BDCEFF;
+    underline: none;
+}
+
 .container-fluid {
     height: 100%;
 }
