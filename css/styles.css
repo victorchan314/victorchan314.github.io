@@ -11,22 +11,22 @@ body {
 }
 
 a:link {
-    color: blue;
+    color: #5B5B5B;
     text-decoration: none;
 }
 
 a:visited {
-    color: blue;
+    color: #5B5B5B;
     text-decoration: none;
 }
 
 a:hover {
-    color: #BDCEFF;
+    color: #767676;
     text-decoration: none;
 }
 
 a:active {
-    color: #BDCEFF;
+    color: #767676;
     text-decoration: none;
 }
 
