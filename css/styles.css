@@ -12,22 +12,22 @@ body {
 
 a:link {
     color: blue;
-    underline: none;
+    text-decoration: none;
 }
 
 a:visited {
     color: blue;
-    underline: none;
+    text-decoration: none;
 }
 
 a:hover {
     color: #BDCEFF;
-    underline: none;
+    text-decoration: none;
 }
 
 a:active {
     color: #BDCEFF;
-    underline: none;
+    text-decoration: none;
 }
 
 .container-fluid {
