@@ -11,13 +11,16 @@ body {
 }
 
 .navbar {
-    background-color: white;
     padding-top: 5px;
     padding-bottom: 5px;
     font-size:18px;
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
+}
+
+.navbar-inverse {
+    background-color: black !important;
 }
 
 .navbar a {
