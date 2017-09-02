@@ -1,5 +1,6 @@
 #aboutrow1container1 {
     position: relative;
+    padding: 0;
 }
 
 #learnmore {
@@ -8,4 +9,7 @@
     right: 0;
     position: absolute;
     bottom: 15%;
+}
+
+#hi {
 }
