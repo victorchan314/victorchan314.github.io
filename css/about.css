@@ -62,3 +62,20 @@ p.legend {
     font-size: 24px;
     border: 2px solid #EFEFEF;
 }
+
+.experiencerow {
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+.experiencerow:hover {
+    background-color: #DDDDDD;
+}
+
+.experiencetitle {
+    display: inline;
+}
+
+.experiencedate {
+    float: right;
+}
