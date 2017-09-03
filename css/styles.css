@@ -10,6 +10,14 @@ body {
     height: 100%;
 }
 
+hr.default {
+    border-color: black;
+}
+
+hr.inverse {
+    border-color: #EFEFEF;
+}
+
 .default {
     background-color: #EFEFEF;
     color: black;
@@ -48,4 +56,8 @@ a:active {
 
 .container-fluid {
     height: 100%;
+}
+
+li {
+    font-size: 18px;
 }
