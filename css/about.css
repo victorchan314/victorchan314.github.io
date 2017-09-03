@@ -18,3 +18,22 @@
 #aboutportrait {
     width: 80%;
 }
+
+div.codes {
+    position: relative;
+    border: 2px solid #787878;
+    margin: 18px;
+    float: left;
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+}
+
+p.codes {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transorm: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
