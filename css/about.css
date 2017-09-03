@@ -19,14 +19,24 @@
     width: 80%;
 }
 
-div.codes {
+div.codes, div.proficient {
     position: relative;
     border: 2px solid #787878;
-    margin: 18px;
     float: left;
+    border-radius: 36px;
     width: 72px;
     height: 72px;
+    margin: 18px;
+}
+
+div.codes, div.proficient {
+    position: relative;
+    border: 2px solid #787878;
+    float: left;
     border-radius: 36px;
+    width: 48px;
+    height: 48px;
+    margin: 18px;
 }
 
 p.codes {
