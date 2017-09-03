@@ -38,15 +38,15 @@
                 var codes = ["Java", "Python", "C", "C++", "Lua", "R", "Spark", "SQL", "HTML", "JS", "CSS", "jQuery", "Node.js"];
                 var levels = [1, 1, 2, 2, 2, 2, 1, 2, 1, 1, 1, 1, 2];
                 for (var i = 0; i < codes.length; i++) {
-                    var div = $('<div></div>').attr('class', 'codes');
-                    $(div).attr("class", function() {
+                    var div = $("<div></div>").addClass("codes");
+                    $(div).addClass(function() {
                         if (levels[i] == 1) {
                             return "advanced";
                         } else if (levels[i] == 2) {
                             return "proficient";
                         }
                     });
-                    var p = $('<p></p>').attr('class', 'codes').text(codes[i]);
+                    var p = $('<p></p>').addClass("codes").text(codes[i]);
                     div.append(p);
                     $('#languages').append(div);
                 }
@@ -103,10 +103,23 @@
 
             <div id="aboutrow3" class="row aboutrow inverse">
 
-                <div id="languages" class="col-md-6">
-                    <center>
-                        <h3>Programming Languages</h3>
-                    </center>
+                <div id="languagescol" class="col-md-6">
+                    <div id="languages">
+                        <center>
+                            <h3>Programming Languages</h3>
+                        </center>
+                    </div>
+
+                    <hr>
+
+                    <div>
+                        <div style="width:72px; height:72px;"class="codes advanced">
+                            <p class="codes legend">Advanced</p>
+                        </div>
+                        <div class="codes proficient">
+                            <p class="codes legend">Proficient</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="tools" class="col-md-6">
