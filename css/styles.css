@@ -10,7 +10,7 @@ body {
     height: 100%;
 }
 
-hr.default {
+hr, hr.default {
     border-color: black;
 }
 
