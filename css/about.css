@@ -11,11 +11,10 @@
     bottom: 15%;
 }
 
-#hi {
+.aboutrow {
     padding: 5%;
 }
 
 #aboutportrait {
-    margin-top: 50px;
     width: 80%;
 }
