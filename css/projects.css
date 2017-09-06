@@ -1,0 +1,11 @@
+.projects {
+    padding: 10px;
+}
+
+.projectsleft {
+    float: right;
+}
+
+.projectsright {
+    float: left;
+}
