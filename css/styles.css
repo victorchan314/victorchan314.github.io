@@ -5,7 +5,7 @@ html {
 body {
     background-color: #EFEFEF;
     color: black;
-    font-family: Arial;
+    font-family: Verdana;
     font-size: 14px;
     height: 100%;
 }
@@ -21,15 +21,15 @@ hr.inverse {
 .default {
     background-color: #EFEFEF;
     color: black;
-    font-family: Arial;
+    font-family: Verdana;
     font-size: 14px;
     height: 100%;
 }
 
 .inverse {
-    background-color: black;
-    color: #EFEFEF;
-    font-family: Arial;
+    background-color: #2E4F84;
+    color: white;
+    font-family: Verdana;
     font-size: 14px;
     height: 100%;
 }

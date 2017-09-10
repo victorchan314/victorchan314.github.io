@@ -8,16 +8,16 @@
     left: 0;
     right: 0;
     position: absolute;
-    bottom: 15%;
+    bottom: 12%;
 }
 
 .aboutrow {
     padding: 3%;
 }
 
-#aboutportrait {
+/*#aboutportrait {
     width: 80%;
-}
+}*/
 
 #aboutrow3 {
     height: auto;
@@ -26,13 +26,23 @@
 div.codes {
     position: relative;
     border: 2px solid #787878;
-    border-radius: 36px;
+    border-radius: 40px;
     float: left;
 }
 
+
+div.codes:hover {
+    background-color: #787878;
+    width: 88px;
+    height: 88px;
+    margin: 14px;
+    border-radius: 44px;
+    font-size: 16px;
+}
+
 div.advanced {
-    width: 72px;
-    height: 72px;
+    width: 80px;
+    height: 80px;
     margin: 18px;
 }
 
