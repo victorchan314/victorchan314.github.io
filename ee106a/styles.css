@@ -91,3 +91,17 @@ body {
     width: 50%;
     margin: 25px;
 }
+
+#image_container {
+    padding: 25px;
+}
+
+.gallery {
+    height: 300px;
+    display: inline;
+    padding: 10px;
+}
+
+#video_container {
+    padding: 25px;
+}
