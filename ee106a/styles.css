@@ -75,6 +75,18 @@ body {
     margin: 25px;
 }
 
+#cv_picture {
+    width: 30%;
+    margin: 25px;
+    display: inline;
+}
+
+#commander_picture {
+    width: 30%;
+    margin: 25px;
+    display: inline;
+}
+
 #setup_picture {
     width: 50%;
     margin: 25px;

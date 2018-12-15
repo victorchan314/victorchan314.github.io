@@ -200,6 +200,11 @@ We have one main ROS node that acts as the connection between the computer visio
 Our computer vision code is all contained within the trace_ball package. The relevant code is contained within get_trace_of_ball_function.py, which uses OpenCV, NumPy, and Deque. The program begins by setting up parameters such as the max time to run, creates a deque, and opens up the webcam feed. It then runs a loop until it either is killed by commander or times out after about 30 seconds. Within the loop, it keeps track of each frame, at a rate of about 30 FPS, and detects a yellow circle (our image of a tennis ball) with OpenCV’s edge and color detection algorithms. The program compares the current center of the ball to the previously calculated center and determines the most probable direction that the ball has been travelling in (basically just the direction with the largest change) before adding that direction to the deque. After the deque is full, the program determines which direction the tennis ball has travelled in the most, and returns that as the output. If no direction is returned, the program returns -1.
                 </p>
 
+                <center>
+                    <img id="cv_picture" class="img-responsive" src="img/flow_cv.png">
+                    <img id="commander_picture" class="img-responsive" src="img/flow_commander.png">
+                </center>
+
             </div>
 
             <div id="system" class="col-md-12">
