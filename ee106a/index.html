@@ -28,36 +28,59 @@
 
             <div class="main row">
 
-                <img class="img-responsive" src="img/jerome1.jpg"></img>
+                <img class="img-responsive" src="img/jerome1_cropped.jpg"></img>
 
                 <center><h1>Acroquad</h1></center>
 
                 <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">Acroquad</a>
-                    </div>
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">Introduction</a></li>
-                        <li><a href="#">Team</a></li>
-                        <li><a href="#">Hardware</a></li>
-                        <li><a href="#">Software</a></li>
-                        <li><a href="#">Challenges</a></li>
-                        <li><a href="#">Results</a></li>
-                        <li><a href="#"></a></li>
+                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#team">Team</a></li>
+                        <li><a href="#hardware">Hardware</a></li>
+                        <li><a href="#software">Software</a></li>
+                        <li><a href="#challenges">Challenges</a></li>
+                        <li><a href="#results">Results</a></li>
                     </ul>
                 </nav>
 
                 <div id="introduction" class="col-md-12">
                     <center><h1>Introduction</h1></center>
+
+                    <p>
+Our goal was to assemble a UAV \ equipped with an onboard computer that uses computer vision to actuate specific movements that are given through command messages using a ROS package called rosflight and its respective firmware.
+                    </p>
+                    <p>
+Using a Raspberry Pi equipped with Ubuntu and the ROS that is connected to the flight controller of the drone, we integrated python code to handle the vision using Open CV and our ROS code using rosflight so the sensing and actuation scripts were handled together. In our finalized version we had a script that could track a bright yellow ball and send movement commands to the motors. 
+                    </p>
+
                 </div>
 
                 <div id="team" class="col-md-12">
                     <center><h1>Team</h1></center>
                 </div>
 
+                <div id="design" class="col-md-12">
+                    <center><h1>Design</h1></center>
+
+                    <p>
+Our final product will be a drone that is controllable without the use of a transmitter. We are aiming to accomplish a task the drone community has started to address in the latest commercial drones, such as the DJI Spark. The applications of such a product are limitless, including disaster search and rescue, subject tracking in cinematography, and automatic obstacle avoidance.
+                    </p>
+                    <p>
+The final product consists of three main components: the Raspberry Pi running ROS, the computer vision model, and the actual quadcopter itself, along with its controls. We will use a small racing quadcopter as the star of the show, running a firmware called ROSflight to translate ROS commands into controls. The quadcopter will be equipped with an onboard Raspberry Pi to process the camera input with computer vision. The model itself, described in more detail in Tasks, may vary as we actually implement the image analysis, but our main ideas include a CNN for edge detection.
+                    </p>
+                    <p>
+Because our project has three modular components, we can augment each of them separately, especially the computer vision model and the commands. We may attempt to use visual inputs other than color, such as hand gestures or shapes, to control the drone. On the other hand, we can also implement more complex controls, including flight planning or path finding. This can be used to track a subject, such as a color rectangle or a face.
+                    </p>
+
+                </div>
+
                 <div id="hardware" class="col-md-12">
                     <center><h1>Hardware</h1></center>
+
+                    <p>
+For the drone we decided to use a Naze 32 F1 flight controller because of its compatibility with the rosflight firmware. Since we used an F1 controller we had to use a FrSky XRS receiver that had a PPM signal, this was specified in the rosflight documentation. We also decided to use a raspberry pi 3B+ with a 32GB SD card with a webcam to do the image processing. Lastly, for our transmitter we used a Taranis QX7 because it was compatible with our receiver and has an easy-to-use user interface for setting up flight models. 
+                    </p>
                 </div>
 
                 <div id="software" class="col-md-12">
@@ -66,10 +89,18 @@
 
                 <div id="challenges" class="col-md-12">
                     <center><h1>Challenges</h1></center>
+
+                    <p>
+We experienced difficulties with both the hardware and software while working on the drone. One issue we ran into was a malfunctioning motor. There were a total of four possible reasons for this malfunction listed as follows: an ESC (electronic speed controller) is burnt out, the pins the ESC is soldered to on flight controller is burnt, the soldered connection between the flight controller and the ESC is not making enough contact, or the motor itself is burnt out. At first we thought the soldered connection were the reason the motor would not spin, so we tested out this theory by first resoldering the connections and added more solder. When this failed we immediately thought the pins we soldered to were burnt out, so we resoldered the ESC to different pins on the board, careful not to desolder one of the other wires or create a bridge and short the flight controller. When this failed to solve the issue, we decided to change out the ESC we were using in hopes that it would solve the problem. We were going to test all the MOSFETs on the ESC to see if one was burnt but we did not have access to a multimeter that had continuity. Again, our assumption that the ESC was the cause for our motor malfunction was incorrect and we realized the motor itself was burnt out. Another hardware issue that we experienced but were unable to resolve was with the transmitter. We had trouble setting up the arming channel correctly on the transmitter and in the rosflight program. This was due to spare documentation and limited forums online that discussed these issues in regards to specifically with rosflight. Since this was not resolved we were unable to fly the drone, and make the motors actuate the commands the flight controller received.
+                    </p>
                 </div>
 
                 <div id="results" class="col-md-12">
                     <center><h1>Results</h1></center>
+
+                    <p>
+Our final result was we had functioning computer vision and ROS software that was able to send movement commands to flight controller and we had a fully functioning drone. The reason the motors were unable to actuate with the rosflight firmware was due to the intense safety features implemented in the firmware the lack of a properly set arming channel on the transmitter prevented use from being able to actuate the motors via code or the transmitter. Due to the lack of documentation and resources on how to set up an arming channel for specifically rosflight, we did not have the time to overcome this challenge before our deadline. In the future we hope to solve this issue and improve our computer vision capabilities and get access to a more powerful onboard computer.
+                    </p>
                 </div>
 
             </div>
