@@ -18,22 +18,13 @@ body {
     height: 100%;
 }
 
-#left {
-    height: 100%;
-}
-
 #portrait {
     height: 80%;
     margin-top: 10%;
     float: right;
 }
 
-#right {
-    height: 100%;
-    padding: 0px 50px;
-}
-
-#resumeicon {
-    height: 34px;
-    padding-left: 8px;
+#team_picture {
+    width: 50%;
+    margin: 25px;
 }
