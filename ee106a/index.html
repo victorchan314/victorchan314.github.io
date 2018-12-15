@@ -104,6 +104,7 @@ I worked on everything related to the Raspberry Pi and ROS, from setting up Ubun
                             </td>
                         </tr>
                     </table>
+
                 </div>
 
                 <div id="design" class="col-md-12">
@@ -130,8 +131,9 @@ Because our project has three modular components, we can augment each of them se
 The drone has a Naze 32 F1 flight controller because of its compatibility with the ROSflight firmware. Since we used an F1 controller we had to use a FrSky XRS receiver that had a PPM signal, as specified in the ROSflight documentation. We decided on a Raspberry Pi 3B+ with a 32GB SD card as our onboard computer, with a Logitech webcam for the image processing. Lastly, we used a Taranis QX7 transmitter because it is compatible with our receiver and has an easy-to-use user interface for setting up flight models.
                         </p>
                         <p>
-Our quadcopter frame was a generic racing FPV drone frame. It took care of most of the parts, but because we used a webcam instead of an FPV camera, we had to create a custom 3D-print piece to attach the webcam onto the drone. Because it was difficult to design the perfect custom part, we also included a little bit of duct tape to secure the webcam position. Finally, we firmly and cleanly fastened the Raspberry Pi to the quadcopter with some double-sided tape and connected it to the F1 controller with a USB-to-microUSB cable.
+Our quadcopter frame was a generic racing FPV drone frame. It took care of most of the parts, but because we used a webcam instead of an FPV camera, we had to create a custom 3D-print piece to attach the webcam onto the drone. Because it was difficult to design the perfect custom part, we also included a little bit of duct tape to secure the webcam position. The webcam is connected to the Raspberry Pi at a USB port. Finally, we firmly and cleanly fastened the Raspberry Pi to the quadcopter with some double-sided tape and connected it to the F1 controller with a USB-to-microUSB cable.
                         </p>
+
                     </div>
 
                     <div id="software" class="col-md-12">
@@ -146,10 +148,43 @@ We have one main ROS node that acts as the connection between the computer visio
                         <p>
 Our computer vision code is all contained within the trace_ball package. The relevant code is contained within get_trace_of_ball_function.py, which uses OpenCV, NumPy, and Deque. The program begins by setting up parameters such as the max time to run, creates a deque, and opens up the webcam feed. It then runs a loop until it either is killed by commander or times out after about 30 seconds. Within the loop, it keeps track of each frame, at a rate of about 30 FPS, and detects a yellow circle (our image of a tennis ball) with OpenCV’s edge and color detection algorithms. The program compares the current center of the ball to the previously calculated center and determines the most probable direction that the ball has been travelling in (basically just the direction with the largest change) before adding that direction to the deque. After the deque is full, the program determines which direction the tennis ball has travelled in the most, and returns that as the output. If no direction is returned, the program returns -1.
                         </p>
+
                     </div>
 
                     <div id="system" class="col-md-12">
                         <center><h1>System</h1></center>
+
+                        <p>
+Our system is simply composed of the three separate modules: the quadcopter and its firmware and flight controller, the Raspberry Pi and ROS, and the computer vision and webcam. As described before, the F1 flight controller is connected to the Raspberry Pi with a USB-to-microUSB cable and controlled by ROSflight, and the computer vision outputs are converted to ROSflight commands through the custom ROS node commander. The system runs as follows:
+                        </p>
+
+                        <ol>
+                            <li>
+The quadcopter is turned on, powering the Raspberry Pi as well.
+                            </li>
+                            <li>
+With an offboard computer, we connect to the Pi, which is set up for headless
+                            </li>
+                            <li>
+We run the ROS node commander from the offboard computer
+                            </li>
+                            <li>
+commander calls the computer vision algorithm, get_trace_of_ball
+                            </li>
+                            <li>
+get_trace_of_ball takes in feed from the webcam and returns a direction (or no direction)
+                            </li>
+                            <li>
+If no direction is detected, commander sleeps for 5 seconds and calls get_trace_of_ball again
+                            </li>
+                            <li>
+If a direction is detected, commander creates a Command message and publishes it on the /command topic
+                            </li>
+                            <li>
+The flight controller receives the command and actuates the quadcopter accordingly
+Steps 4-9 are repeated until we kill the ROS node and ROScore with the offboard computer
+                            </li>
+                        </ol>
                     </div>
 
                 </div>
