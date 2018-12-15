@@ -116,7 +116,8 @@ For our design criteria, we decided that our project must have a working, flying
                     </p>
                     <p>
 Our final design pits a Raspberry Pi equipped with Ubuntu 16.04 and the ROS Kinetic as the onboard computer. It is connected to the flight controller of the drone and uses ROSflight to communicate with the drone, a small generic FPV racing quadcopter. The software is all written in Python, which in our opinion, is the most suitable language for both ROS and for computer vision. It integrates the OpenCV computer vision function and the ROSflight firmware with a ROS node as the link between them. As a result, the sensing and actuation scripts are handled together in the ROS node. In our finalized version, our computer vision script tracks a bright yellow circle (e.g. a tennis ball) and sends movement commands to the motors based on the direction the ball is moved.
-
+                    </p>
+                    <p>
 Using the Raspberry Pi was a trade-off between expensive computing power and simple adaptability. We weren’t sure exactly how the code would be run, and with our budget of $50, we decided that the Raspberry Pi, while not optimal, was good enough to meet our design criteria. In a real-world situation, the expensive Nvidia Jetson would be more likely to meet any reliability criteria. Another related trade-off was between running the computer vision on the onboard or offboard computer. The offboard computer was arguably faster and better-equipped to handle the code, but getting the video feed to the camera over the network would be far too slow. Because the Raspberry Pi was enough to handle the terrible resolution of the Logitech webcams, we were able to bypass the offboard computer. We were limited to tracking “easier” objects, such as a bright yellow circle instead of human body parts. Again, in an industry setting, a more powerful onboard computer would be a great starting solution to allowing more computer power.
                     </p>
 
@@ -201,8 +202,13 @@ We experienced difficulties with both the hardware and software while working on
                     <center><h1>Results</h1></center>
 
                     <p>
-Our final result was an almost-working quadcopter that was just unable to fly. Our computer vision and ROS software was able to properly function and send commands to the flight controller. On the hardware side, our drone fully functioned and was controllable with the transmitter when using Betaflight instead of ROSflight. The connection between the Raspberry Pi and flight controller sent the appropriate messages, and the flight controller received them as well. Check out the videos!
+Our final result was an almost-working quadcopter that was just unable to fly. Our computer vision and ROS software was able to properly function and send commands to the flight controller. On the hardware side, our drone fully functioned and was controllable with the transmitter when using Betaflight instead of ROSflight. The connection between the Raspberry Pi and flight controller sent the appropriate messages, and the flight controller received them as well. Check out the video!
                     </p>
+
+                    <center>
+                        <iframe id="preliminary_demo" width="560" height="315" src="https://www.youtube.com/embed/94f4LI98am8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+
                 </div>
 
                 <div id="conclusion" class="col-md-12">
