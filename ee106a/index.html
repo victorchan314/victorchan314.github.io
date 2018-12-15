@@ -43,6 +43,7 @@
                         <li><a href="#system">System</a></li>
                         <li><a href="#challenges">Challenges</a></li>
                         <li><a href="#results">Results</a></li>
+                        <li><a href="#conclusion">Conclusion</a></li>
                         <li><a href="#additional_information">Additional Information</a></li>
                     </ul>
                 </nav>
@@ -201,8 +202,20 @@ We experienced difficulties with both the hardware and software while working on
                     <center><h1>Results</h1></center>
 
                     <p>
-Our final result was we had functioning computer vision and ROS software that was able to send movement commands to flight controller and we had a fully functioning drone. The reason the motors were unable to actuate with the rosflight firmware was due to the intense safety features implemented in the firmware the lack of a properly set arming channel on the transmitter prevented use from being able to actuate the motors via code or the transmitter. Due to the lack of documentation and resources on how to set up an arming channel for specifically rosflight, we did not have the time to overcome this challenge before our deadline. In the future we hope to solve this issue and improve our computer vision capabilities and get access to a more powerful onboard computer.
+Our final result was an almost-working quadcopter that was just unable to fly. Our computer vision and ROS software was able to properly function and send commands to the flight controller. On the hardware side, our drone fully functioned and was controllable with the transmitter when using Betaflight instead of ROSflight. The connection between the Raspberry Pi and flight controller sent the appropriate messages, and the flight controller received them as well. Check out the videos!
                     </p>
+                </div>
+
+                <div id="conclusion" class="col-md-12">
+                    <center><h1>Conclusion</h1></center>
+
+                    <p>
+In the end, Acroquad met all of the design requirements except the final flying phase. All of the hardware and software functioned perfectly. Of course, no robotics project is complete without hacks. With the hardware, we attached the webcam to the quadcopter frame with some duct tape--it is, in robotics, a panacea. On the software side, the main hack was with how we called the computer vision code with the ROS node. Because they had been written separately, the computer vision code was originally run as a Python program and not a function. We simply jammed all of the code into a function, get_trace_of_ball, and just called that ugly long function with the ROS node. The final hack was how our offboard computer ran code on the Raspberry Pi. We never got around to creating a script that would start everything necessary for the quadcopter to fly, so instead, we would run the roscore in the background before calling commander. With more time to clean up the hacks, we would definitely design a better 3D-printed mount for the webcam, clean up the code with more articulated functions, and write a shell script that would cleanly take care of running all the software. Furthermore, we can extend our project by improving our computer vision capabilities to be less sensitive to noise and to detect a wider range of movements, including not just a tennis ball, but also human body movements. And it can never hurt to get more powerful hardware, most notably a better (and more expensive) onboard computer.
+                    </p>
+                    <p>
+The one problem that prevented the drone from actually flying was with the ROSflight firmware. ROSflight is set up so that the motors are unable to actuate because of the intense safety features implemented in the firmware. The lack of a properly set arming channel on the transmitter prevented us from being able to actuate the motors via the ROSflight commands or the transmitter. Due to the lack of documentation and resources on how to set up an arming channel for specifically ROSflight, we did not have time to overcome this challenge before our deadline. Basically, everything worked, but ROSflight implemented a safety feature that we could not disarm to get the drone to respond to the commands. In the future we hope to solve this issue and possibly even write documentation for ROSflight on how to overcome this problem.
+                    </p>
+
                 </div>
 
                 <div id="additional_information" class="col-md-12">
