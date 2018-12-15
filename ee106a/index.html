@@ -37,10 +37,13 @@
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="#introduction">Introduction</a></li>
                         <li><a href="#team">Team</a></li>
+                        <li><a href="#Design">Design</a></li>
                         <li><a href="#hardware">Hardware</a></li>
                         <li><a href="#software">Software</a></li>
+                        <li><a href="#system">System</a></li>
                         <li><a href="#challenges">Challenges</a></li>
                         <li><a href="#results">Results</a></li>
+                        <li><a href="#additional_information">Additional Information</a></li>
                     </ul>
                 </nav>
 
@@ -118,16 +121,24 @@ Because our project has three modular components, we can augment each of them se
 
                 </div>
 
-                <div id="hardware" class="col-md-12">
-                    <center><h1>Hardware</h1></center>
+                <div id="implementation" class="col-md-12">
 
-                    <p>
+                    <div id="hardware" class="col-md-12">
+                        <center><h1>Hardware</h1></center>
+
+                        <p>
 For the drone we decided to use a Naze 32 F1 flight controller because of its compatibility with the rosflight firmware. Since we used an F1 controller we had to use a FrSky XRS receiver that had a PPM signal, this was specified in the rosflight documentation. We also decided to use a raspberry pi 3B+ with a 32GB SD card with a webcam to do the image processing. Lastly, for our transmitter we used a Taranis QX7 because it was compatible with our receiver and has an easy-to-use user interface for setting up flight models. 
-                    </p>
-                </div>
+                        </p>
+                    </div>
 
-                <div id="software" class="col-md-12">
-                    <center><h1>Software</h1></center>
+                    <div id="software" class="col-md-12">
+                        <center><h1>Software</h1></center>
+                    </div>
+
+                    <div id="system" class="col-md-12">
+                        <center><h1>System</h1></center>
+                    </div>
+
                 </div>
 
                 <div id="challenges" class="col-md-12">
@@ -144,6 +155,10 @@ We experienced difficulties with both the hardware and software while working on
                     <p>
 Our final result was we had functioning computer vision and ROS software that was able to send movement commands to flight controller and we had a fully functioning drone. The reason the motors were unable to actuate with the rosflight firmware was due to the intense safety features implemented in the firmware the lack of a properly set arming channel on the transmitter prevented use from being able to actuate the motors via code or the transmitter. Due to the lack of documentation and resources on how to set up an arming channel for specifically rosflight, we did not have the time to overcome this challenge before our deadline. In the future we hope to solve this issue and improve our computer vision capabilities and get access to a more powerful onboard computer.
                     </p>
+                </div>
+
+                <div id="additional_information" class="col-md-12">
+                    <center><h1>Additional Information</h1></center>
                 </div>
 
             </div>
