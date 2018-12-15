@@ -37,7 +37,7 @@
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="#introduction">Introduction</a></li>
                         <li><a href="#team">Team</a></li>
-                        <li><a href="#Design">Design</a></li>
+                        <li><a href="#design">Design</a></li>
                         <li><a href="#hardware">Hardware</a></li>
                         <li><a href="#software">Software</a></li>
                         <li><a href="#system">System</a></li>
@@ -112,13 +112,12 @@ I worked on everything related to the Raspberry Pi and ROS, from setting up Ubun
                     <center><h1>Design</h1></center>
 
                     <p>
-Our final product will be a drone that is controllable without the use of a transmitter. We are aiming to accomplish a task the drone community has started to address in the latest commercial drones, such as the DJI Spark. The applications of such a product are limitless, including disaster search and rescue, subject tracking in cinematography, and automatic obstacle avoidance.
+For our design criteria, we decided that our project must have a working, flying quadcopter. It should process visual input from a camera and use that input to control the quadcopter. Because drones are notorious for being inconsistent, we do not have any lower limit for reliability, except that it should work at least some of the time; however, the separate components should function properly.
                     </p>
                     <p>
-The final product consists of three main components: the Raspberry Pi running ROS, the computer vision model, and the actual quadcopter itself, along with its controls. We will use a small racing quadcopter as the star of the show, running a firmware called ROSflight to translate ROS commands into controls. The quadcopter will be equipped with an onboard Raspberry Pi to process the camera input with computer vision. The model itself, described in more detail in Tasks, may vary as we actually implement the image analysis, but our main ideas include a CNN for edge detection.
-                    </p>
-                    <p>
-Because our project has three modular components, we can augment each of them separately, especially the computer vision model and the commands. We may attempt to use visual inputs other than color, such as hand gestures or shapes, to control the drone. On the other hand, we can also implement more complex controls, including flight planning or path finding. This can be used to track a subject, such as a color rectangle or a face.
+Our final design pits a Raspberry Pi equipped with Ubuntu 16.04 and the ROS Kinetic as the onboard computer. It is connected to the flight controller of the drone and uses ROSflight to communicate with the drone, a small generic FPV racing quadcopter. The software is all written in Python, which in our opinion, is the most suitable language for both ROS and for computer vision. It integrates the OpenCV computer vision function and the ROSflight firmware with a ROS node as the link between them. As a result, the sensing and actuation scripts are handled together in the ROS node. In our finalized version, our computer vision script tracks a bright yellow circle (e.g. a tennis ball) and sends movement commands to the motors based on the direction the ball is moved.
+
+Using the Raspberry Pi was a trade-off between expensive computing power and simple adaptability. We weren’t sure exactly how the code would be run, and with our budget of $50, we decided that the Raspberry Pi, while not optimal, was good enough to meet our design criteria. In a real-world situation, the expensive Nvidia Jetson would be more likely to meet any reliability criteria. Another related trade-off was between running the computer vision on the onboard or offboard computer. The offboard computer was arguably faster and better-equipped to handle the code, but getting the video feed to the camera over the network would be far too slow. Because the Raspberry Pi was enough to handle the terrible resolution of the Logitech webcams, we were able to bypass the offboard computer. We were limited to tracking “easier” objects, such as a bright yellow circle instead of human body parts. Again, in an industry setting, a more powerful onboard computer would be a great starting solution to allowing more computer power.
                     </p>
 
                 </div>
