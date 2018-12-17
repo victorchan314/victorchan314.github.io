@@ -8,6 +8,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
@@ -19,6 +22,15 @@
 
         <link rel="stylesheet" type="text/css" href="styles.css">
 
+        <script>
+            $("document").ready(function() {
+                var height = $("#navbar").height();
+                $("#title").css({"top": height + "px"});
+                $(".anchor").css({"margin-top": -height + "px"});
+                $(".anchor").height(height);
+            });
+        </script>
+
     </head>
 
 
@@ -28,14 +40,10 @@
 
         <div class="main row">
 
-        <img id="title_picture" class="img-responsive" src="img/jerome1_cropped.jpg"></img>
-
-        <center><h1>Acroquad</h1></center>
-
-        <nav id="navbar" class="navbar navbar-inverse">
+        <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="http://victorcchann.com/ee106a">Acroquad</a>
+                    <a class="navbar-brand" href="http://victorcchan.com/ee106a">Acroquad</a>
                 </div>
 
                 <div class="collapse navbar-collapse">
@@ -55,7 +63,14 @@
             </div>
         </nav>
 
-        <div id="introduction" class="col-md-12">
+        <div id="home">
+            <img id="title_picture" class="img-responsive" src="img/jerome1_cropped.jpg">
+            <center id="title"><h1>Acroquad</h1></center>
+        </div>
+
+        <div id="introduction" class="anchor col-md-12"></div>
+
+        <div class="col-md-12">
             <center><h1>Introduction</h1></center>
 
             <p>
@@ -67,7 +82,9 @@ Unmanned aerial vehicles are currently a popular branch of robotics, with leadin
 
         </div>
 
-        <div id="team" class="col-md-12">
+        <div id="team" class="anchor col-md-12"></div>
+
+        <div class="col-md-12">
             <center><h1>Team</h1></center>
 
             <table id="team_information" class="table table-responsive">
@@ -154,7 +171,9 @@ I worked on everything related to the Raspberry Pi and ROS, from setting up Ubun
 
         </div>
 
-        <div id="design" class="col-md-12">
+        <div id="design" class="anchor col-md-12"></div>
+
+        <div class="col-md-12">
             <center><h1>Design</h1></center>
 
             <p>
@@ -169,9 +188,13 @@ Using the Raspberry Pi was a trade-off between expensive computing power and sim
 
         </div>
 
-        <div id="implementation">
+        <div id="implementation" class="anchor col-md-12"></div>
 
-            <div id="hardware" class="col-md-12">
+        <div>
+
+            <div id="hardware" class="anchor col-md-12"></div>
+
+            <div class="col-md-12">
                 <center><h1>Hardware</h1></center>
 
                 <p>
@@ -187,7 +210,9 @@ Our quadcopter frame was a generic racing FPV drone frame. It took care of most 
 
             </div>
 
-            <div id="software" class="col-md-12">
+            <div id="software" class="anchor col-md-12"></div>
+
+            <div class="col-md-12">
                 <center><h1>Software</h1></center>
 
                 <p>
@@ -207,7 +232,9 @@ Our computer vision code is all contained within the trace_ball package. The rel
 
             </div>
 
-            <div id="system" class="col-md-12">
+            <div id="system" class="anchor col-md-12"></div>
+
+            <div class="col-md-12">
                 <center><h1>System</h1></center>
 
                 <p>
@@ -250,7 +277,9 @@ Steps 4-9 are repeated until we kill the ROS node and ROScore with the offboard 
 
         </div>
 
-        <div id="challenges" class="col-md-12">
+        <div id="challenges" class="anchor col-md-12"></div>
+
+        <div class="col-md-12">
             <center><h1>Challenges</h1></center>
 
             <p>
@@ -258,7 +287,9 @@ We experienced difficulties with both the hardware and software while working on
             </p>
         </div>
 
-        <div id="results" class="col-md-12">
+        <div id="results" class="anchor col-md-12"></div>
+
+        <div class="col-md-12">
             <center><h1>Results</h1></center>
 
             <p>
@@ -286,7 +317,9 @@ Our final result was an almost-working quadcopter that was just unable to fly. O
 
         </div>
 
-        <div id="conclusion" class="col-md-12">
+        <div id="conclusion" class="anchor col-md-12"></div>
+
+        <div class="col-md-12">
             <center><h1>Conclusion</h1></center>
 
             <p>
@@ -298,7 +331,9 @@ The one problem that prevented the drone from actually flying was with the ROSfl
 
         </div>
 
-        <div id="miscellaneous" class="col-md-12">
+        <div id="miscellaneous" class="anchor col-md-12"></div>
+
+        <div class="col-md-12">
             <center><h1>Miscellaneous</h1></center>
 
             Github: <a href="https://github.com/victorchan314/ee106a_final_project_code">https://github.com/victorchan314/ee106a_final_project_code</a>

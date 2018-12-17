@@ -29,7 +29,7 @@ body {
 
 .navbar-inverse {
     background-image: none !important;
-    background-color: black !important;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .navbar a {
@@ -59,10 +59,11 @@ body {
     color: #E4E4E4 !important;
 }
 
-#portrait {
-    height: 80%;
-    margin-top: 10%;
-    float: right;
+#title {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
 }
 
 #team_picture {
