@@ -26,7 +26,8 @@
             $("document").ready(function() {
                 var height = $("#navbar").outerHeight();
                 $(".anchor").css({"margin-top": -height + "px"});
-                $(".anchor").css({"padding-top": height + "px"});
+                $(".anchor").height(height);
+                $("#home").css({"margin-top": "0px"});
                 $("#title").css({"top": height + "px"});
             });
         </script>
@@ -43,7 +44,7 @@
         <nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="http://victorcchan.com/ee106a">Acroquad</a>
+                    <a class="navbar-brand" href="#home">Acroquad</a>
                 </div>
 
                 <div class="collapse navbar-collapse">
@@ -63,7 +64,9 @@
             </div>
         </nav>
 
-        <div id="home">
+        <div id="home" class="anchor"></div>
+
+        <div>
             <img id="title_picture" class="img-responsive" src="img/jerome1_cropped.jpg">
             <center id="title"><h1>Acroquad</h1></center>
         </div>
