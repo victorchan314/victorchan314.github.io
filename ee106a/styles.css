@@ -79,6 +79,13 @@ body {
     right: 0px;
 }
 
+#goal {
+    background-color: pink;
+    font-style: italic;
+    font-size: 24px;
+    padding: 20px;
+}
+
 #team_picture_container {
     position: relative;
 }
