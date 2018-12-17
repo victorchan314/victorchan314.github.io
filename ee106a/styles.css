@@ -91,6 +91,8 @@ body {
 #team_picture_labelled {
     position: absolute;
     bottom: 0px;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 #hardware_picture {

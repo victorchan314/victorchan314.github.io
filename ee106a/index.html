@@ -43,6 +43,14 @@
                         $("#navbar").css({"background-color": "rgba(0, 0, 0, 0.3)"});
                     }
                 });
+
+                /* Set hover trigger for labelled team picture. */
+                $("#team_picture").hover(
+                function () {
+                    $("#team_picture_labelled").css({"visibility": "visible"});
+                }, function () {
+                    $("#team_picture_labelled").css({"visibility": "hidden"});
+                });
             });
         </script>
 
