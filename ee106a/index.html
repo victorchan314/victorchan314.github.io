@@ -24,6 +24,7 @@
 
         <script>
             $("document").ready(function() {
+                /* Set anchor parameters based on navbar height. */
                 var height = $("#navbar").outerHeight();
                 $(".anchor").css({"margin-top": -height + "px"});
                 $(".anchor").height(height);
@@ -31,6 +32,7 @@
                 $("#home").css({"visibility": "visible"});
                 $("#title").css({"top": height + "px"});
 
+                /* Set navbar to black after scrolling past title image. */
                 $(window).scroll(function() {
                     // top = img top + img height - navbar height = img height
                     var top = $("#title_picture").outerHeight();
@@ -105,6 +107,9 @@ Unmanned aerial vehicles are currently a popular branch of robotics, with leadin
             <div id="team_picture_container">
                 <center>
                     <img id="team_picture" class="img-responsive" src="img/team.jpg">
+                </center>
+                <center>
+                    <img id="team_picture_labelled" class="img-responsive" src="img/team_labelled.jpg">
                 </center>
             </div>
 

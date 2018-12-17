@@ -79,9 +79,18 @@ body {
     right: 0px;
 }
 
+#team_picture_container {
+    position: relative;
+}
+
 #team_picture {
     width: 50%;
     margin: 25px;
+}
+
+#team_picture_labelled {
+    position: absolute;
+    bottom: 0px;
 }
 
 #hardware_picture {
