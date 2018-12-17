@@ -29,6 +29,17 @@
                 $(".anchor").height(height);
                 $("#home").css({"margin-top": "0px"});
                 $("#title").css({"top": height + "px"});
+
+                $(window).scroll(function() {
+                    // top = img top + img height - navbar height = img height
+                    var top = $("#title_picture").outerHeight();
+
+                    if ($(this).scrollTop() > top) {
+                        $("#navbar").css({"background-color": "black"});
+                    } else {
+                        $("#navbar").css({"background-color": "rgba(0, 0, 0, 0.3)"});
+                    }
+                });
             });
         </script>
 
