@@ -44,11 +44,17 @@
                     }
                 });
 
+                /* Set hover trigger for goal. */
+                $("#goal").hover(function() {
+                    $("#goal").text("Our Goal: To assemble a UAV with an onboard computer that responds to visual commands by actuating in a corresponding movement and to not write a run-on sentence as our goal.");
+                    }, function () {
+                    $("#goal").text("Our Goal: To assemble a UAV with an onboard computer that responds to visual commands by actuating in a corresponding movement.");
+                });
+
                 /* Set hover trigger for labelled team picture. */
-                $("#team_picture").hover(
-                function () {
+                $("#team_picture").hover(function() {
                     $("#team_picture_labelled").css({"visibility": "visible"});
-                }, function () {
+                }, function() {
                     $("#team_picture_labelled").css({"visibility": "hidden"});
                 });
             });
