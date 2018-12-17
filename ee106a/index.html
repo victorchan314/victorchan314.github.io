@@ -24,17 +24,17 @@
 
         <script>
             $("document").ready(function() {
-                var height = $("#navbar").height();
-                $("#title").css({"top": height + "px"});
+                var height = $("#navbar").outerHeight();
                 $(".anchor").css({"margin-top": -height + "px"});
-                $(".anchor").height(height);
+                $(".anchor").css({"padding-top": height + "px"});
+                $("#title").css({"top": height + "px"});
             });
         </script>
 
     </head>
 
 
-    <body>
+    <body data-spy="scroll" data-target="#navbar">
 
         <div class="container-fluid">
 
