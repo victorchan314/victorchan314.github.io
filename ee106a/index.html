@@ -255,10 +255,10 @@ Our quadcopter frame was a generic racing FPV drone frame. It took care of most 
 Our software consists of two main parts: the ROS nodes, and the computer vision algorithm. Everything is written in Python2.7 and runs on the Raspberry Pi, to which we downloaded Ubuntu 16.04 and installed ROS kinetic. We actually discovered that Ubiquity Robotics provides a Ubuntu 16.04 image with ROS kinetic already installed, which made the flashing process a lot easier.
                 </p>
                 <p>
-We have one main ROS node that acts as the connection between the computer vision and the quadcopter. Our ROS package, sight_to_flight, has one ROS node: commander. The ROS node calls the get_trace_of_ball function in the trace_ball package and receives 1 of 4 directions: 0 (up), 1 (down), 2 (left), and 3 (right). commander then generates a new Command message, defined in the ROSflight package, sets the parameters to correspond to the appropriate direction, and publishes it to the /command topic. It then restarts the get_trace_of_ball function and loops until the ROS program is quit.
+We have one main ROS node that acts as the connection between the computer vision and the quadcopter. Our ROS package, <code>sight_to_flight</code>, has one ROS node: <code>commander</code>. The ROS node calls the <code>get_trace_of_ball</code> function in the <code>trace_ball</code> package and receives 1 of 4 directions: <code>0</code> (up), <code>1</code> (down), <code>2</code> (left), and <code>3</code> (right). <code>commander</code> then generates a new <code>Command</code> message, defined in the ROSflight package, sets the parameters to correspond to the appropriate direction, and publishes it to the <code>/command</code> topic. It then restarts the <code>get_trace_of_ball</code> function and loops until the ROS program is quit.
                 </p>
                 <p>
-Our computer vision code is all contained within the trace_ball package. The relevant code is contained within get_trace_of_ball_function.py, which uses OpenCV, NumPy, and Deque. The program begins by setting up parameters such as the max time to run, creates a deque, and opens up the webcam feed. It then runs a loop until it either is killed by commander or times out after about 30 seconds. Within the loop, it keeps track of each frame, at a rate of about 30 FPS, and detects a yellow circle (our image of a tennis ball) with OpenCV’s edge and color detection algorithms. The program compares the current center of the ball to the previously calculated center and determines the most probable direction that the ball has been travelling in (basically just the direction with the largest change) before adding that direction to the deque. After the deque is full, the program determines which direction the tennis ball has travelled in the most, and returns that as the output. If no direction is returned, the program returns -1.
+Our computer vision code is all contained within the <code>trace_ball</code> package. The relevant code is contained within <code>get_trace_of_ball_function.py</code>, which uses OpenCV, NumPy, and Deque. The program begins by setting up parameters such as the max time to run, creates a deque, and opens up the webcam feed. It then runs a loop until it either is killed by <code>commander</code> or times out after about 30 seconds. Within the loop, it keeps track of each frame, at a rate of about 30 FPS, and detects a yellow circle (our image of a tennis ball) with OpenCV’s edge and color detection algorithms. The program compares the current center of the ball to the previously calculated center and determines the most probable direction that the ball has been travelling in (basically just the direction with the largest change) before adding that direction to the deque. After the deque is full, the program determines which direction the tennis ball has travelled in the most, and returns that as the output. If no direction is returned, the program returns <code>-1</code>.
                 </p>
 
                 <center>
@@ -274,7 +274,7 @@ Our computer vision code is all contained within the trace_ball package. The rel
                 <center><h1>System</h1></center>
 
                 <p>
-Our system is simply composed of the three separate modules: the quadcopter and its firmware and flight controller, the Raspberry Pi and ROS, and the computer vision and webcam. As described before, the F1 flight controller is connected to the Raspberry Pi with a USB-to-microUSB cable and controlled by ROSflight, and the computer vision outputs are converted to ROSflight commands through the custom ROS node commander. The system runs as follows:
+Our system is simply composed of the three separate modules: the quadcopter and its firmware and flight controller, the Raspberry Pi and ROS, and the computer vision and webcam. As described before, the F1 flight controller is connected to the Raspberry Pi with a USB-to-microUSB cable and controlled by ROSflight, and the computer vision outputs are converted to ROSflight commands through the custom ROS node <code>commander</code>. The system runs as follows:
                 </p>
 
                 <ol>
@@ -285,23 +285,25 @@ The quadcopter is turned on, powering the Raspberry Pi as well.
 With an offboard computer, we connect to the Pi, which is set up for headless
                     </li>
                     <li>
-We run the ROS node commander from the offboard computer
+We run the ROS node <code>commander</code> from the offboard computer
                     </li>
                     <li>
-commander calls the computer vision algorithm, get_trace_of_ball
+<code>commander</code> calls the computer vision algorithm, <code>get_trace_of_ball</code>
                     </li>
                     <li>
-get_trace_of_ball takes in feed from the webcam and returns a direction (or no direction)
+<code>get_trace_of_ball</code> takes in feed from the webcam and returns a direction (or no direction)
                     </li>
                     <li>
-If no direction is detected, commander sleeps for 5 seconds and calls get_trace_of_ball again
+If no direction is detected, <code>commander</code> sleeps for 5 seconds and calls <code>get_trace_of_ball</code> again
                     </li>
                     <li>
-If a direction is detected, commander creates a Command message and publishes it on the /command topic
+                    If a direction is detected, <code>commander</code> creates a <code>Command</code> message and publishes it on the <code>/command</code> topic
                     </li>
                     <li>
 The flight controller receives the command and actuates the quadcopter accordingly
-Steps 4-9 are repeated until we kill the ROS node and ROScore with the offboard computer
+                    </li>
+                    <li>
+Steps 4-8 are repeated until we kill the ROS node and ROScore with the offboard computer
                     </li>
                 </ol>
 
