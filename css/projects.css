@@ -1,11 +1,19 @@
-.projects {
-    padding: 10px;
+#title {
+    padding-bottom: 10px;
 }
 
 .projects_left {
-    float: right;
+    background-color: green;
 }
 
 .projects_right {
-    float: left;
+    background-color: pink;
+}
+
+.projects_img_container {
+    padding: 0px;
+}
+
+.projects_img {
+    width: 100%;
 }
