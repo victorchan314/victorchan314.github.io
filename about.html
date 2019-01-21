@@ -58,8 +58,8 @@
                 for (var i = 0; i < experiences.length; i++) {
                     var experience = experiences[i]
 
-                    var div = $("<div></div>").addClass("col-md-12 experience_row").attr("id", experience.id);
-                    var ul = $("<ul></ul>").addClass("experience");
+                    var div = $("<div></div>").addClass("col-md-12 experience").attr("id", experience.id);
+                    var ul = $("<ul></ul>").addClass("experience_list");
                     var header1 = $("<div></div>");
                     var header2 = $("<div></div>");
                     var title = $("<h4></h4>").addClass("experience_title").text(experience.organization);
@@ -81,7 +81,7 @@
                     }
 
                     div.append(ul);
-                    $("#experience").append(div);
+                    $("#experience_container").append(div);
                 }
             }
 
@@ -103,13 +103,13 @@
 
         <div class="container-fluid">
 
-            <div id="about_row_1" class="row">
+            <div id="hang_row" class="row">
 
-                <div id="about_row_1_container_1" class="col-md-12">
+                <div id="hang_container" class="col-md-12">
                     <img id="hang" class="img-responsive" src="img/hanging.jpg">
                     <div id="learn_more">
                         <center>
-                            <a href="#about_row_2">
+                            <a href="#about_row_1">
                                 <h3>
                                     Hey, how's it hanging?<br>
                                     Learn more about me below.
@@ -122,7 +122,7 @@
 
             </div>
 
-            <div id="about_row_2" class="row about_row">
+            <div id="intro_row" class="row about_row">
 
                 <div id="hi" class="col-md-12">
                     <center>
@@ -144,7 +144,7 @@
 
             </div>
 
-            <div id="about_row_3" class="row about_row inverse">
+            <div id="skills_row" class="row about_row inverse">
 
                 <center><h1>SKILLS</h1></center>
 
@@ -225,9 +225,9 @@
 
             </div>
 
-            <div id="about_row_4" class="row about_row">
+            <div id="experience_row" class="row about_row">
 
-                <div id="experience" class="col-md-12">
+                <div id="experience_container" class="col-md-12">
                     <center>
                         <h1>EXPERIENCE</h1>
                     </center>

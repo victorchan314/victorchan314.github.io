@@ -1,4 +1,4 @@
-#about_row_1_container_1 {
+#hang_container {
     position: relative;
     padding: 0;
 }
@@ -19,7 +19,7 @@
     width: 80%;
 }*/
 
-#about_row_3 {
+#skills_row {
     height: auto;
 }
 
@@ -91,18 +91,18 @@ p.language {
     margin: 8px;
 }*/
 
-ul.experience > li {
+ul.experience_list > li {
     font-size: 14px;
 }
 
-.experience_row {
+.experience {
     padding-top: 10px;
     padding-right: 10px;
     border-top-style: solid;
     border-width: 1px;
 }
 
-.experience_row:hover {
+.experience:hover {
     background-color: #DDDDDD;
 }
 
