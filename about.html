@@ -29,6 +29,10 @@
                 $("#navbar_space").load("navbar.html", function() {
                     $(".navbar-nav li").removeClass("active");
                     $("#about_link").addClass("active");
+
+                    var navbarHeight = $("#navbar").outerHeight();
+                    var windowHeight = $(window).height();
+                    $("#hang_container").height(windowHeight - navbarHeight)
                 });
             });
         </script>
@@ -85,11 +89,7 @@
                 }
             }
 
-            $.getJSON("https://dev.victorcchan.com/data/about.json", function(data) {
-                loadExperience(data.experience);
-            });
-
-            $.getJSON("http://dev.victorcchan.com/data/about.json", function(data) {
+            $.getJSON("data/about.json", function(data) {
                 loadExperience(data.experience);
             });
         </script>

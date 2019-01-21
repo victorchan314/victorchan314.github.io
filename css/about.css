@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+#hang {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
 #learn_more {
     margin: auto;
     left: 0;
@@ -75,7 +82,7 @@ p.legend {
 }*/
 
 p.language {
-    margin: 0px 15px;
+    margin: 0 15px;
     padding: 10px;
     top: 50%;
     left: 50%;
