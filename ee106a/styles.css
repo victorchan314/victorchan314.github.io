@@ -1,0 +1,140 @@
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #EFEFEF;
+    color: black;
+    font-family: Arial;
+    font-size: 14px;
+    height: 100%;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+}
+
+.section {
+    border-bottom: 1px solid #BBBBBB;
+    padding-bottom: 20px;
+}
+
+.anchor {
+    visibility: hidden;
+}
+
+.navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size:18px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.navbar-inverse {
+    background-image: none !important;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar a {
+    color: white;
+}
+
+.navbar-header a {
+    color: white !important;
+}
+
+.navbar-header a:hover {
+    color: #DDDDDD !important;
+}
+
+.navbar-nav li a {
+    color: white !important;
+}
+
+.navbar-nav li a:hover {
+    background-color: #383838 !important;
+}
+
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+    background: #383838 !important;
+    color: #E4E4E4 !important;
+}
+
+#home {
+    background-color: black;
+}
+
+#title {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+#goal {
+    background-color: pink;
+    font-style: italic;
+    font-size: 24px;
+    padding: 20px;
+}
+
+#team_picture_container {
+    position: relative;
+}
+
+#team_picture {
+    width: 50%;
+    margin: 25px;
+}
+
+#team_picture_labelled {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#hardware_picture {
+    width: 70%;
+    margin: 25px;
+}
+
+#cv_picture {
+    width: 30%;
+    margin: 25px;
+    display: inline;
+}
+
+#commander_picture {
+    width: 30%;
+    margin: 25px;
+    display: inline;
+}
+
+#setup_picture {
+    width: 50%;
+    margin: 25px;
+}
+
+#image_container {
+    padding: 25px;
+}
+
+.gallery {
+    height: 300px;
+    display: inline;
+    padding: 10px;
+}
+
+#video_container {
+    padding: 25px;
+}
