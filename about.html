@@ -58,14 +58,14 @@
                 for (var i = 0; i < experiences.length; i++) {
                     var experience = experiences[i]
 
-                    var div = $("<div></div>").addClass("col-md-12 experiencerow").attr("id", experience.id);
+                    var div = $("<div></div>").addClass("col-md-12 experience_row").attr("id", experience.id);
                     var ul = $("<ul></ul>").addClass("experience");
                     var header1 = $("<div></div>");
                     var header2 = $("<div></div>");
-                    var title = $("<h4></h4>").addClass("experiencetitle").text(experience.organization);
-                    var location = $("<span></span>").addClass("experiencedate").text(experience.location);
-                    var position = $("<h5></h5>").addClass("experiencetitle").append($("<i></i>").append(experience.position));
-                    var dates = $("<span></span>").addClass("experiencedate").text(experience.start).append(" &mdash; ").append(experience.end);
+                    var title = $("<h4></h4>").addClass("experience_title").text(experience.organization);
+                    var location = $("<span></span>").addClass("experience_date").text(experience.location);
+                    var position = $("<h5></h5>").addClass("experience_title").append($("<i></i>").append(experience.position));
+                    var dates = $("<span></span>").addClass("experience_date").text(experience.start).append(" &mdash; ").append(experience.end);
 
                     header1.append(title);
                     header1.append(location);
@@ -81,7 +81,7 @@
                     }
 
                     div.append(ul);
-                    $("#experienceslist").append(div);
+                    $("#experience").append(div);
                 }
             }
 
@@ -101,15 +101,15 @@
 
         <div id="navbarspace"></div>
 
-        <div id="experienceslist" class="container-fluid">
+        <div class="container-fluid">
 
-            <div id="aboutrow1" class="row">
+            <div id="about_row_1" class="row">
 
-                <div id="aboutrow1container1" class="col-md-12">
+                <div id="about_row_1_container_1" class="col-md-12">
                     <img id="hang" class="img-responsive" src="img/hanging.jpg">
-                    <div id="learnmore">
+                    <div id="learn_more">
                         <center>
-                            <a href="#aboutrow2">
+                            <a href="#about_row_2">
                                 <h3>
                                     Hey, how's it hanging?<br>
                                     Learn more about me below.
@@ -122,7 +122,7 @@
 
             </div>
 
-            <div id="aboutrow2" class="row aboutrow">
+            <div id="about_row_2" class="row about_row">
 
                 <div id="hi" class="col-md-12">
                     <center>
@@ -139,16 +139,16 @@
                 </div>
 
                 <!--<div class="col-md-4">
-                    <img id="aboutportrait" class="img-responsive img-circle" alt="Repeated portrait from the home page" src="img/Victor.jpg">
+                    <img id="about_portrait" class="img-responsive img-circle" alt="Repeated portrait from the home page" src="img/Victor.jpg">
                 </div>-->
 
             </div>
 
-            <div id="aboutrow3" class="row aboutrow inverse">
+            <div id="about_row_3" class="row about_row inverse">
 
                 <center><h1>SKILLS</h1></center>
 
-                <div id="languagescol" class="col-md-6">
+                <div id="languages_col" class="col-md-6">
                     <div id="languages">
                         <center>
                             <h2>Programming Languages</h2>
@@ -225,7 +225,7 @@
 
             </div>
 
-            <div id="aboutrow4" class="row aboutrow">
+            <div id="about_row_4" class="row about_row">
 
                 <div id="experience" class="col-md-12">
                     <center>
