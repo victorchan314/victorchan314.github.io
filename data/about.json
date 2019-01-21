@@ -1,0 +1,95 @@
+{
+    "experience": [
+        {
+            "id": "amazon2018",
+            "organization": "Amazon",
+            "location": "Seattle, WA",
+            "position": "Software Engineering Intern",
+            "start": "May 2018",
+            "end": "August 2018",
+            "bullets": [
+                "Designed and developed internal web app for non-technical PMs to update Contact Us g2s2 tables",
+                "Frontend: Vue.js, Vuex, webpack, Bootstrap-Vue, Less; Created WYSIWYG interface to replace manual .csv file writing",
+                "Backend: Java, Spring, Horizonte, Amazon UI; Wrote and exposed 2 backend APIs and tested with Mockito and JUnit"
+            ]
+        },
+        {
+            "id": "dssbcdo",
+            "organization": "Data Science Society at Berkeley",
+            "location": "Berkeley, CA",
+            "position": "Career Development Officer",
+            "start": "August 2017",
+            "end": "December 2017",
+            "bullets": [
+                "Organized annual Berkeley Data Science Forum by leading Career Development Team to plan and execute the event",
+                "Brought on board 8 speakers from Apple, Spotify, Instagram, LinkedIn, and other companies",
+                "Planned and hosted infosessions throughout the semester for FTI Consulting, GE Digital, and more",
+                "Hosted Data Science-oriented resume review sessions and interview workshops for students"
+            ]
+        },
+        {
+            "id": "cs70",
+            "organization": "Discrete Mathematics and Probability (CS 70)",
+            "location": "Berkeley, CA",
+            "position": "Reader",
+            "start": "August 2017",
+            "end": "December 2017",
+            "bullets": [
+                "Devise problem sets on topics such as polynomial interpolation and graph theory for 800 CS70 students",
+                "Hold office hours to guide ten students a week through questions about homework and course material",
+                "Organize, host, and tutor at cumulative review sections before midterms and finals to prepare students for exams"
+            ]
+        },
+        {
+            "id": "intertrust",
+            "organization": "Intertrust Technologies Corporation",
+            "location": "Sunnyvale, CA",
+            "position": "Data Science Intern",
+            "start": "May 2017",
+            "end": "August 2017",
+            "bullets": [
+                "Optimized client request handling and resource allocation by developing ARIMA model to forecast future request counts",
+                "Performed PCA dimensionality reduction (scikit-learn) on .csv dataset to reduce file size and computation time by over 34x",
+                "Clustered unlabeled sensor data with k-means and compared with neural network labels to predict windmill functionality"
+            ]
+        },
+        {
+            "id": "makerfunc",
+            "organization": "MakerFunc Innovation Camp",
+            "location": "Suzhou, China",
+            "position": "Robotics Camp Instructor",
+            "start": "July 2017",
+            "end": "August 2017",
+            "bullets": [
+                "Developed Robotics Sensors and Programming curriculum for high school students at a summer tech camp in Suzhou",
+                "Led two weeks of classes and workshops, during which 10 students built and programmed complex drones and VEX robots"
+            ]
+        },
+        {
+            "id": "dssbfairvote",
+            "organization": "Data Science Society at Berkeley",
+            "location": "Berkeley, CA",
+            "position": "Fairvote Data Scientist",
+            "start": "January 2017",
+            "end": "May 2017",
+            "bullets": [
+                "Partner with FairVote to isolate trends in Bay Area election data to analyze effectiveness of Instant Runoff Voting",
+                "Program election modeling software (Python/R) based on San Francisco elections to compare various voting paradigms",
+                "Develop interactive website (HTML, jQuery) to clearly illustrate results to the public"
+            ]
+        },
+        {
+            "id": "knodemy",
+            "organization": "Knodemy Inc.",
+            "location": "Livermore, CA",
+            "position": "IT Intern",
+            "start": "July 2015",
+            "end": "August 2015",
+            "bullets": [
+                "Formulated curriculum and taught courses for Robotics, Web Development (HTML, JS, CSS), and Java",
+                "Updated Knodemy website per requests of the design team",
+                "Coordinated KnoCode Hackathon for 50+ high school students: acquired sponsorships, recruited judging panel, PR"
+            ]
+        }
+    ]
+}

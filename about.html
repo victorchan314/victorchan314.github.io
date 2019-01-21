@@ -46,10 +46,51 @@
                             return "proficient";
                         }
                     });
-                    var p = $('<p></p>').addClass("codes").text(codes[i]);
+                    var p = $("<p></p>").addClass("codes").text(codes[i]);
                     div.append(p);
-                    $('#languages').append(div);
+                    $("#languages").append(div);
                 }
+            });
+        </script>
+
+        <script>
+            function loadExperience(experiences) {
+                for (var i = 0; i < experiences.length; i++) {
+                    var experience = experiences[i]
+
+                    var div = $("<div></div>").addClass("col-md-12 experiencerow").attr("id", experience.id);
+                    var ul = $("<ul></ul>").addClass("experience");
+                    var header1 = $("<div></div>");
+                    var header2 = $("<div></div>");
+                    var title = $("<h4></h4>").addClass("experiencetitle").text(experience.organization);
+                    var location = $("<span></span>").addClass("experiencedate").text(experience.location);
+                    var position = $("<h5></h5>").addClass("experiencetitle").append($("<i></i>").append(experience.position));
+                    var dates = $("<span></span>").addClass("experiencedate").text(experience.start).append(" &mdash; ").append(experience.end);
+
+                    header1.append(title);
+                    header1.append(location);
+                    header2.append(position);
+                    header2.append(dates);
+                    ul.append(header1);
+                    ul.append(header2);
+
+                    var bullets = experience.bullets;
+
+                    for (var j = 0; j < bullets.length; j++) {
+                        ul.append($("<li></li>").text(bullets[j]));
+                    }
+
+                    div.append(ul);
+                    $("#experienceslist").append(div);
+                }
+            }
+
+            $.getJSON("https://dev.victorcchan.com/data/about.json", function(data) {
+                loadExperience(data.experience);
+            });
+
+            $.getJSON("http://dev.victorcchan.com/data/about.json", function(data) {
+                loadExperience(data.experience);
             });
         </script>
 
@@ -60,7 +101,7 @@
 
         <div id="navbarspace"></div>
 
-        <div class="container-fluid">
+        <div id="experienceslist" class="container-fluid">
 
             <div id="aboutrow1" class="row">
 
@@ -190,109 +231,6 @@
                     <center>
                         <h1>EXPERIENCE</h1>
                     </center>
-                </div>
-                <hr>
-                <div id="amazon2018" class="col-md-12 experiencerow">
-                    <ul class="experience"><div>
-                            <h4 class="experiencetitle">Amazon</h4>
-                            <span class="experiencedate">Seattle, WA</span>
-                        </div>
-                        <div>
-                            <h5 class="experiencetitle"><i>Software Engineering Intern</i></h5>
-                            <span class="experiencedate">May 2018 &ndash; August 2018</span>
-                        </div>
-                        <li>Designed and developed internal web app for non-technical PMs to update Contact Us g2s2 tables</li>
-                        <li>Frontend: Vue.js, Vuex, webpack, Bootstrap-Vue, Less; Created WYSIWYG interface to replace manual .csv file writing</li>
-                        <li>Backend: Java, Spring, Horizonte, Amazon UI; Wrote and exposed 2 backend APIs and tested with Mockito and JUnit</li>
-                    </ul>
-                </div>
-                <div id="dssbcdo" class="col-md-12 experiencerow">
-                    <ul class="experience"><div>
-                            <h4 class="experiencetitle">Data Science Society at Berkeley</h4>
-                            <span class="experiencedate">Berkeley, CA</span>
-                        </div>
-                        <div>
-                            <h5 class="experiencetitle"><i>Career Development Officer</i></h5>
-                            <span class="experiencedate">August 2017 &ndash; December 2017</span>
-                        </div>
-                        <li>Organized annual Berkeley Data Science Forum by leading Career Development Team to plan and execute the event</li>
-                        <li>Brought on board 8 speakers from Apple, Spotify, Instagram, LinkedIn, and other companies</li>
-                        <li>Planned and hosted infosessions throughout the semester for FTI Consulting, GE Digital, and more</li>
-			<li>Hosted Data Science-oriented resume review sessions and interview workshops for students</li>
-                    </ul>
-                </div>
-                <hr class="default">
-                <div id="cs70" class="col-md-12 experiencerow">
-                    <ul class="experience"><div>
-                            <h4 class="experiencetitle">Discrete Mathematics and Probability (CS 70)</h4>
-                            <span class="experiencedate">Berkeley, CA</span>
-                        </div>
-                        <div>
-                            <h5 class="experiencetitle"><i>Reader</i></h5>
-                            <span class="experiencedate">August 2017 &ndash; December 2017</span>
-                        </div>
-                        <li>Devise problem sets on topics such as polynomial interpolation and graph theory for 800 CS70 students</li>
-                        <li>Hold office hours to guide ten students a week through questions about homework and course material</li>
-                        <li>Organize, host, and tutor at cumulative review sections before midterms and finals to prepare students for exams</li>
-                    </ul>
-                </div>
-                <div id="intertrust" class="col-md-12 experiencerow">
-                    <ul class="experience"><div>
-                            <h4 class="experiencetitle">Intertrust Technologies Corporation</h4>
-                            <span class="experiencedate">Sunnyvale, CA</span>
-                        </div>
-                        <div>
-                            <h5 class="experiencetitle"><i>Data Science Intern</i></h5>
-                            <span class="experiencedate">May 2017 &ndash; August 2017</span>
-                        </div>
-                        <li>Optimized client request handling and resource allocation by developing ARIMA model to forecast future request counts</li>
-                        <li>Performed PCA dimensionality reduction (scikit-learn) on .csv dataset to reduce file size and computation time by over 34x</li>
-                        <li>Clustered unlabeled sensor data with k-means and compared with neural network labels to predict windmill functionality</li>
-                    </ul>
-                </div>
-                <hr>
-                <div id="makerfunc" class="col-md-12 experiencerow">
-                    <ul class="experience"><div>
-                            <h4 class="experiencetitle">MakerFunc Innovation Camp</h4>
-                            <span class="experiencedate">Suzhou, China</span>
-                        </div>
-                        <div>
-                            <h5 class="experiencetitle"><i>Robotics Camp Instructor</i></h5>
-                            <span class="experiencedate">July 2017 &ndash; August 2017</span>
-                        </div>
-                        <li>Developed Robotics Sensors and Programming curriculum for high school students at a summer tech camp in Suzhou</li>
-                        <li>Led two weeks of classes and workshops, during which 10 students built and programmed complex drones and VEX robots</li>
-                    </ul>
-                </div>
-                <hr>
-                <div id="dssbfairvote" class="col-md-12 experiencerow">
-                    <ul class="experience"><div>
-                            <h4 class="experiencetitle">Data Science Society at Berkeley</h4>
-                            <span class="experiencedate">Berkeley, CA</span>
-                        </div>
-                        <div>
-                            <h5 class="experiencetitle"><i>Fairvote Data Scientist</i></h5>
-                            <span class="experiencedate">January 2017 &ndash; May 2017</span>
-                        </div>
-                        <li>Partner with FairVote to isolate trends in Bay Area election data to analyze effectiveness of Instant Runoff Voting</li>
-                        <li>Program election modeling software (Python/R) based on San Francisco elections to compare various voting paradigms</li>
-                        <li>Develop interactive website (HTML, jQuery) to clearly illustrate results to the public</li>
-                    </ul>
-                </div>
-                <hr>
-                <div id="knodemy" class="col-md-12 experiencerow">
-                    <ul class="experience"><div>
-                            <h4 class="experiencetitle">Knodemy Inc.</h4>
-                            <span class="experiencedate">Livermore, CA</span>
-                        </div>
-                        <div>
-                            <h5 class="experiencetitle"><i>IT Intern</i></h5>
-                            <span class="experiencedate">July 2015 &ndash; August 2015</span>
-                        </div>
-                        <li>Formulated curriculum and taught courses for Robotics, Web Development (HTML, JS, CSS), and Java</li>
-                        <li>Updated Knodemy website per requests of the design team</li>
-                        <li>Coordinated KnoCode Hackathon for 50+ high school students: acquired sponsorships, recruited judging panel, PR</li>
-                    </ul>
                 </div>
 
             </div>
