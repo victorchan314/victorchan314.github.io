@@ -1,0 +1,21 @@
+{
+    "projects": [
+        {
+            "name": "Acroquad",
+            "image_path": "ee106a/img/jerome1.jpg",
+            "website": "ee106a",
+            "github": "https://github.com/victorchan314/ee106a_final_project_code",
+            "text": [
+                "Built for my EE 106A final project, Acroquad is a drone controlled by computer vision. It takes in input from its camera, processes the movement, and actuates in predefined responses to the commands."
+            ],
+            "languages": [
+                "Python"
+            ],
+            "tools": [
+                "ROS",
+                "ROSflight",
+                "OpenCV"
+            ]
+        }
+    ]
+}

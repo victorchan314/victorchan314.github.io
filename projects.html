@@ -34,6 +34,61 @@
         </script>
 
         <script>
+            function loadProjects(projects) {
+                for (var i = 0; i < projects.length; i++) {
+                    var project = projects[i]
+
+                    var div = $("<div></div>").addClass("row project_row");
+                    var left = $("<div></div>").addClass("project_left col-md-6");
+                    var right = $("<div></div>").addClass("project_right col-md-6");
+
+                    var img;
+                    var text;
+
+                    if (i % 2 === 0) {
+                        img = left;
+                        text = right;
+                    } else {
+                        img = right;
+                        text = left;
+                    }
+
+                    img.addClass("project_img_container");
+                    img.append($("<img>").addClass("img img-responsive project_img").attr("src", project.image_path));
+                    img.append($("<a></a>").attr("href", project.website).append($("<div></div>").addClass("img_overlay")));
+
+                    text.addClass("project_text");
+                    var text_container = $("<div></div>").addClass("col-md-12");
+
+                    text_container.append($("<center></center>").append($("<p></p>").addClass("project_title").text(project.name)));
+
+                    var paragraphs = project.text;
+
+                    for (var j = 0; j < paragraphs.length; j++) {
+                        text_container.append($("<p></p>").addClass("project_text").text(paragraphs[j]));
+                    }
+
+                    text_container.append($("<br>"));
+                    text_container.append($("<p></p>").addClass("project_text").append($("<i></i>").text("Languages: " + project.languages.join(", "))));
+                    text_container.append($("<p></p>").addClass("project_text").append($("<i></i>").text("Tools: " + project.tools.join(", "))));
+                    text_container.append($("<br>"));
+
+                    var website = $("<span></span>").append($("<a></a>").addClass("btn project_link").attr("href", project.website).text("Website"));
+                    var github = $("<span></span>").append($("<a></a>").addClass("btn project_link").attr("href", project.github).text("Github"));
+
+                    text_container.append($("<center></center>").append(website).append(github));
+
+                    text.append($("<div></div>").addClass("row").append(text_container));
+
+                    div.append(left);
+                    div.append(right);
+                    $("#projects_container").append(div);
+                }
+            }
+
+            $.getJSON("data/projects.json", function(data) {
+                loadProjects(data.projects);
+            });
         </script>
 
     </head>
@@ -49,43 +104,6 @@
                 <div class="col-md-12">
                     <center><h1>Projects</h1></center>
                 </div>
-            </div>
-
-            <div class="row project_row">
-
-                <div class="project_left project_img_container col-md-6">
-                    <img class="img img-responsive project_img" src="ee106a/img/jerome1.jpg">
-                    <a href="ee106a"><div class="img_overlay"></div></a>
-                </div>
-
-                <div class="project_right project_text col-md-6">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <center><p class="project_title">Acroquad</p></center>
-
-                            <p class="project_text">
-                            Built for my EE 106A final project, Acroquad is a drone controlled by computer vision. It takes in input from its camera, processes the movement, and actuates in predefined responses to the commands.
-                            </p>
-                            <br>
-                            <p class="project_text">
-                            <i>Languages: Python</i>
-                            </p>
-                            <p class="project_text">
-                            <i>Tools: ROS, ROSflight, OpenCV</i>
-                            </p>
-                            <br>
-                            <center>
-                                <span>
-                                    <a class="btn project_link" href="ee106a">Website</a>
-                                </span>
-                                <span>
-                                    <a class="btn project_link" href="https://github.com/victorchan314/ee106a_final_project_code">Github</a>
-                                </span>
-                            </center>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
         </div>

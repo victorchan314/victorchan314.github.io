@@ -27,6 +27,7 @@ p.project_text {
 }
 
 .project_link {
+    margin: 15px;
     background-color: #4DFFB8;
     font-size: 24px;
 }
