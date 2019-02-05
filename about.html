@@ -65,10 +65,10 @@
                     var div = $("<div></div>").addClass("col-md-12 experience").attr("id", experience.id);
                     var ul = $("<ul></ul>").addClass("experience_list");
                     var header1 = $("<div></div>");
-                    var header2 = $("<div></div>");
+                    var header2 = $("<div></div>").addClass("experience_header_bottom");
                     var title = $("<h4></h4>").addClass("experience_title").text(experience.organization);
                     var location = $("<span></span>").addClass("experience_date").text(experience.location);
-                    var position = $("<h5></h5>").addClass("experience_title").append($("<i></i>").append(experience.position));
+                    var position = $("<h5></h5>").addClass("experience_title experience_position").append($("<i></i>").append(experience.position));
                     var dates = $("<span></span>").addClass("experience_date").text(experience.start).append(" &mdash; ").append(experience.end);
 
                     header1.append(title);
