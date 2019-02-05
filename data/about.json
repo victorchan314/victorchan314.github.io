@@ -1,6 +1,31 @@
 {
     "experience": [
         {
+            "id": "research",
+            "organization": "California PATH",
+            "location": "Berkeley, CA",
+            "position": "Undergraduate Student Researcher",
+            "start": "September 2018",
+            "end": "present",
+            "bullets": [
+                "Model arterial traffic flow and occupancy data with machine learning models (SARIMAX, Network Analysis)",
+                "Analyze imputation methods to fill in gaps in seasonal time series dataset to accurately apply to other PATH research"
+            ]
+        },
+        {
+            "id": "cs161sp2019",
+            "organization": "CS 161: Computer Security",
+            "location": "Berkeley, CA",
+            "position": "Undergraduate Student Instructor",
+            "start": "January 2019",
+            "end": "present",
+            "bullets": [
+                "Teach 2 discussion sections and hold 2 office hours per week to guide students through course material and review lecture",
+                "Lead development and logistics as head TA for Project 2: a secure file-storage client coded in Go (migrated from Python)",
+                "Write homeworks and exams, answer question on Piazza, proctor exams, update course website"
+            ]
+        },
+        {
             "id": "amazon2018",
             "organization": "Amazon",
             "location": "Seattle, WA",
@@ -11,6 +36,18 @@
                 "Designed and developed internal web app for non-technical PMs to update Contact Us g2s2 tables",
                 "Frontend: Vue.js, Vuex, webpack, Bootstrap-Vue, Less; Created WYSIWYG interface to replace manual .csv file writing",
                 "Backend: Java, Spring, Horizonte, Amazon UI; Wrote and exposed 2 backend APIs and tested with Mockito and JUnit"
+            ]
+        },
+        {
+            "id": "parkourdecal",
+            "organization": "BIOENG 98/198: UC Berkeley Parkour Decal",
+            "location": "Berkeley, CA",
+            "position": "Instructor",
+            "start": "August 2017",
+            "end": "present",
+            "bullets": [
+                "Semesterly student-led class covering the basics of parkour and freerunning",
+                "Demonstrate moves and guide students to learn them during interactive outdoor lectures"
             ]
         },
         {
