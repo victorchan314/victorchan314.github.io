@@ -22,11 +22,11 @@
 
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
         <link rel="stylesheet" type="text/css" href="../css/navbar.css">
-        <!--<link rel="stylesheet" type="text/css" href="css/index.css">-->
+        <link rel="stylesheet" type="text/css" href="cs161-sp19.css">
 
         <script>
             $(function(){
-                $("#navbar_space").load("navbar.html");
+                $("#navbar_space").load("../navbar.html");
             });
         </script>
 
@@ -41,35 +41,54 @@
 
             <div class="main row">
 
-                <center><h1>CS 161 Spring 2019</h1></center>
+                <div class="col-md-12">
 
-                <table id="sections" class="table table-responsive">
-                    <tr>
-                        <th>Section</th>
-                        <th>Time</th>
-                        <th>Location</th>
-                    </tr>
-                    <tr>
-                        <td>DIS 102</td>
-                        <td>Wed 9:00 - 10:00am</td>
-                        <td>Hildebrand B56</td>
-                    </tr>
-                    <tr>
-                        <td>DIS 113</td>
-                        <td>Wed 5:00 - 6:00pm</td>
-                        <td>Evans 70</td>
-                    </tr>
-                    <tr>
-                        <td>OH</td>
-                        <td>Mon 12:00 - 1:00pm</td>
-                        <td>Soda 611</td>
-                    </tr>
-                    <tr>
-                        <td>OH</td>
-                        <td>Fri 2:00 - 3:00pm</td>
-                        <td>Soda 611</td>
-                    </tr>
-                </table>
+                    <center><h1>CS 161 Spring 2019</h1></center>
+
+                    <center>
+                        <table id="sections" class="table table-responsive">
+                            <tr>
+                                <th>Section</th>
+                                <th>Time</th>
+                                <th>Location</th>
+                            </tr>
+                            <tr>
+                                <td>DIS 102</td>
+                                <td>Wed 9:00 - 10:00am</td>
+                                <td>Hildebrand B56</td>
+                            </tr>
+                            <tr>
+                                <td>DIS 113</td>
+                                <td>Wed 5:00 - 6:00pm</td>
+                                <td>Evans 70</td>
+                            </tr>
+                            <tr>
+                                <td>OH</td>
+                                <td>Mon 12:00 - 1:00pm</td>
+                                <td>Soda 611</td>
+                            </tr>
+                            <tr>
+                                <td>OH</td>
+                                <td>Fri 2:00 - 3:00pm</td>
+                                <td>Soda 611</td>
+                            </tr>
+                        </table>
+                    </center>
+                </div>
+
+                <div class="col-md-2"></div>
+
+                <div id="discussion_slides" class="col-md-8">
+                    <ul>
+                        <h3>Discussion Slides</h3>
+                        Not all of these are useful.
+                        <br><br>
+                        <li><a href="discussion_slides/dis01_slides.pdf">Discussion 1 Slides</a></li>
+                        <li><a href="discussion_slides/dis02_slides.pdf">Discussion 2 Slides</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2"></div>
 
             </div>
 

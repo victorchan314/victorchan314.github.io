@@ -1,19 +1,7 @@
-.main {
-    height: 100%;
+#sections {
+    width: 60%;
 }
 
-.section {
-    border-bottom: 1px solid #BBBBBB;
-    padding-bottom: 20px;
-}
-
-#home {
-    background-color: black;
-}
-
-#title {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+#discussion_slides {
+    padding-top: 30px;
 }
