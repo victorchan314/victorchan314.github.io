@@ -1,6 +1,19 @@
 {
     "experience": [
         {
+            "id": "amazon2019",
+            "organization": "Amazon.com",
+            "location": "Tempe, AZ",
+            "position": "Software Engineering Intern",
+            "start": "June 2019",
+            "end": "August 2019",
+            "bullets": [
+                "Designed and built from scratch fully serverless internal ops tool to manipulate JSON schemas in DynamoDB databases",
+                "AWS Lambda backend API configured with CloudFormation to connect 3 internal services; Java, Dagger, JUnit/Mockito",
+                "Clean and intuitive Cloudfront UI; React-Redux, Jest, SuperAgent, Redux-Saga, SCSS; webpack, TypeScript/TSLint, Babel"
+            ]
+        },
+        {
             "id": "research",
             "organization": "California PATH",
             "location": "Berkeley, CA",
@@ -18,7 +31,7 @@
             "location": "Berkeley, CA",
             "position": "Undergraduate Student Instructor",
             "start": "January 2019",
-            "end": "present",
+            "end": "May 2019",
             "bullets": [
                 "Teach 2 discussion sections and hold 2 office hours per week to guide students through course material and review lecture",
                 "Lead development and logistics as head TA for Project 2: a secure file-storage client coded in Go (migrated from Python)",
@@ -27,14 +40,14 @@
         },
         {
             "id": "amazon2018",
-            "organization": "Amazon",
+            "organization": "Amazon.com",
             "location": "Seattle, WA",
             "position": "Software Engineering Intern",
             "start": "May 2018",
             "end": "August 2018",
             "bullets": [
                 "Designed and developed internal web app for non-technical PMs to update Contact Us g2s2 tables",
-                "Frontend: Vue.js, Vuex, webpack, Bootstrap-Vue, Less; Created WYSIWYG interface to replace manual .csv file writing",
+                "Frontend: Vue.js, Vuex, Bootstrap-Vue, Less, webpack, npm; Created WYSIWYG interface to replace manual .csv file writing",
                 "Backend: Java, Spring, Horizonte, Amazon UI; Wrote and exposed 2 backend APIs and tested with Mockito and JUnit"
             ]
         },
