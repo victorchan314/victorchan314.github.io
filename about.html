@@ -39,8 +39,8 @@
 
         <script>
             $(function() {
-                var codes = ["Java", "Python", "C", "C++", "R", "Spark", "SQL", "Go", "Lua", "HTML", "JS", "CSS", "jQuery", "Node.js", "Vue.JS"];
-                var levels = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+                var codes = ["Java", "Python", "C", "C++", "R", "Spark", "SQL", "Go", "Lua", "HTML", "JS", "CSS", "jQuery", "Node.js", "React/\nRedux", "Vue/Vuex"];
+                var levels = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
                 for (var i = 0; i < codes.length; i++) {
                     var div = $("<div></div>").addClass("codes");
                     $(div).addClass(function() {
@@ -148,10 +148,10 @@
 
                 <center><h1>SKILLS</h1></center>
 
-                <div id="languages_col" class="col-md-6">
+                <div id="languages_col" class="col-md-5">
                     <div id="languages">
                         <center>
-                            <h2>Programming Languages</h2>
+                            <h2>Programming Languages/Frameworks</h2>
                         </center>
                     </div>
                     <!--<br style="clear:left">
@@ -166,26 +166,36 @@
                     </div>-->
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-7">
 
                     <div class="row">
 
-                        <div id="libraries" class="col-md-5">
+                        <div id="libraries" class="col-md-7">
                             <ul><center><h2>Libraries</h2></center>
-                                <li>SciPy<ul>
-                                    <li>NumPy</li>
-                                    <li>Matplotlib</li>
-                                    <li>Pandas</li>
+                                <li>Python<ul>
+                                    <li>SciPy (NumPy, Matplotlib, pandas)</li>
+                                    <li>scikit-learn</li>
+                                    <li>TensorFlow</li>
+                                    <li>PyTorch</li>
+                                    <li>pyclustering</li>
+                                    <li>pycrypto</li>
                                 </ul></li>
-                                <li>scikit-learn</li>
-                                <li>pyclustering</li>
-                                <li>pycrypto</li>
-                                <li>socket</li>
-                                <li>JUnit</li>
+                                <li>Java<ul>
+                                    <li>JUnit/Mockito</li>
+                                    <li>Dagger</li>
+                                    <li>Spring</li>
+                                </ul></li>
+                                <li>Web Development<ul>
+                                    <li>Typescript/TSLint</li>
+                                    <li>JavaScript: Jest, SuperAgent, Redux-Saga</li>
+                                    <li>SCSS/Less</li>
+                                    <li>webpack</li>
+                                    <li>Babel</li>
+                                </ul></li>
                             </ul>
                         </div>
 
-                        <div id="tools" class="col-md-7">
+                        <div id="tools" class="col-md-5">
                             <ul><center><h2>Tools</h2></center>
                                 <li>Command line</li>
                                 <li>Github</li>
