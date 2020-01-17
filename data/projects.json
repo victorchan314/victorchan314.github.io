@@ -16,6 +16,17 @@
                 "ROSflight",
                 "OpenCV"
             ]
+        },
+        {
+            "name": "YouTube Controls",
+            "image_path": "img/YouTubeControls.png",
+            "github": "https://github.com/victorchan314/ytc",
+            "text": [
+                "A Chrome extension that extends the YouTube video player. In addition to the basic Pause/Play functions, it allows setting custom speed and skip values and skipping ads. Perfect for watching lecture webcasts, or just for everyday use!"
+            ],
+            "languages": [
+                "JavaScript"
+            ]
         }
     ]
 }

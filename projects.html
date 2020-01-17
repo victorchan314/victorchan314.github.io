@@ -55,7 +55,13 @@
 
                     img.addClass("project_img_container");
                     img.append($("<img>").addClass("img img-responsive project_img").attr("src", project.image_path));
-                    img.append($("<a></a>").attr("href", project.website).append($("<div></div>").addClass("img_overlay")));
+
+                    if (project.hasOwnProperty("website")) {
+                        var website_link = project.website
+                    } else {
+                        var website_link = project.github
+                    }
+                    img.append($("<a></a>").attr("href", website_link).append($("<div></div>").addClass("img_overlay")));
 
                     text.addClass("project_text");
                     var text_container = $("<div></div>").addClass("col-md-12");
@@ -70,13 +76,23 @@
 
                     text_container.append($("<br>"));
                     text_container.append($("<p></p>").addClass("project_text").append($("<i></i>").text("Languages: " + project.languages.join(", "))));
-                    text_container.append($("<p></p>").addClass("project_text").append($("<i></i>").text("Tools: " + project.tools.join(", "))));
+
+                    if (project.hasOwnProperty("tools")) {
+                        text_container.append($("<p></p>").addClass("project_text").append($("<i></i>").text("Tools: " + project.tools.join(", "))));
+                    }
+
                     text_container.append($("<br>"));
 
-                    var website = $("<span></span>").append($("<a></a>").addClass("btn project_link").attr("href", project.website).text("Website"));
-                    var github = $("<span></span>").append($("<a></a>").addClass("btn project_link").attr("href", project.github).text("Github"));
+                    var center = $("<center></center>");
+                    text_container.append(center)
 
-                    text_container.append($("<center></center>").append(website).append(github));
+                    if (project.hasOwnProperty("website")) {
+                        var website = $("<span></span>").append($("<a></a>").addClass("btn project_link").attr("href", project.website).text("Website"));
+                        center.append(website);
+                    }
+
+                    var github = $("<span></span>").append($("<a></a>").addClass("btn project_link").attr("href", project.github).text("Github"));
+                    center.append(github);
 
                     text.append($("<div></div>").addClass("row").append(text_container));
 

@@ -1,13 +1,8 @@
-html {
-    height: 100%;
-}
-
 body {
     background-color: #EFEFEF;
     color: black;
     font-family: Verdana;
     font-size: 14px;
-    height: 100%;
 }
 
 hr, hr.default {
@@ -23,7 +18,6 @@ hr.inverse {
     color: black;
     font-family: Verdana;
     font-size: 14px;
-    height: 100%;
 }
 
 .inverse {
@@ -31,7 +25,6 @@ hr.inverse {
     color: white;
     font-family: Verdana;
     font-size: 14px;
-    height: 100%;
 }
 
 a:link {
@@ -52,10 +45,6 @@ a:hover {
 a:active {
     color: #767676;
     text-decoration: none;
-}
-
-.container-fluid {
-    height: 100%;
 }
 
 li {
