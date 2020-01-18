@@ -1,6 +1,37 @@
 {
     "projects": [
         {
+            "name": "Analyzing Policy Distillation on Multi-Task Learning and Meta-Reinforcement Learning in Meta-World",
+            "paper": "/files/analyzing_policy_distillation.pdf",
+            "github": "https://github.com/victorchan314/cs285-final-project",
+            "text": [
+                "This paper applied Divide-and-Conquer, a recent policy distillation algorithm, on Meta-World multi-task and meta-reinforcement learning benchmarks. We achieved state-of-the-art results with the MT-10 benchmark."
+            ],
+            "languages": [
+                "Python"
+            ],
+            "tools": [
+                "TensorFlow",
+                "rllab",
+                "Meta-World"
+            ]
+        },
+        {
+            "name": "DynaPEARL",
+            "github": "https://github.com/victorchan314?tab=repositories",
+            "text": [
+                "DynaPEARL explores model-based RL with the PEARL meta-learning algorithm."
+            ],
+            "languages": [
+                "Python"
+            ],
+            "tools": [
+                "PyTorch",
+                "RLkit",
+                "MuJoCo"
+            ]
+        },
+        {
             "name": "Acroquad",
             "image_path": "ee106a/img/jerome1.jpg",
             "website": "ee106a",

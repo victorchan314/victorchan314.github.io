@@ -8,8 +8,8 @@
 }
 
 div.project_text {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .project_img {
@@ -20,6 +20,10 @@ div.project_text {
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: 48px;
+}
+
+.project_title.small_title {
+    font-size: 32px;
 }
 
 p.project_text {

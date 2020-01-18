@@ -36,7 +36,7 @@
         <script>
             function loadProjects(projects) {
                 for (var i = 0; i < projects.length; i++) {
-                    var project = projects[i]
+                    var project = projects[i];
 
                     var div = $("<div></div>").addClass("row project_row");
                     var left = $("<div></div>").addClass("project_left col-md-6");
@@ -54,19 +54,32 @@
                     }
 
                     img.addClass("project_img_container");
-                    img.append($("<img>").addClass("img img-responsive project_img").attr("src", project.image_path));
 
-                    if (project.hasOwnProperty("website")) {
-                        var website_link = project.website
+                    if (project.hasOwnProperty("image_path")) {
+                        img.append($("<img>").addClass("img img-responsive project_img").attr("src", project.image_path));
+
+                        if (project.hasOwnProperty("website")) {
+                            var website_link = project.website;
+                        } else if (project.hasOwnProperty("paper")) {
+                            var website_link = project.paper;
+                        } else {
+                            var website_link = project.github;
+                        }
+                        img.append($("<a></a>").attr("href", website_link).append($("<div></div>").addClass("img_overlay")));
                     } else {
-                        var website_link = project.github
+                        div.addClass("default");
+                        text.addClass("inverse");
                     }
-                    img.append($("<a></a>").attr("href", website_link).append($("<div></div>").addClass("img_overlay")));
 
                     text.addClass("project_text");
                     var text_container = $("<div></div>").addClass("col-md-12");
 
-                    text_container.append($("<center></center>").append($("<p></p>").addClass("project_title").text(project.name)));
+                    var title = $("<p></p>").addClass("project_title").text(project.name);
+                    text_container.append($("<center></center>").append(title));
+
+                    if (project.name.length > 24) {
+                        title.addClass("small_title");
+                    }
 
                     var paragraphs = project.text;
 
@@ -89,6 +102,11 @@
                     if (project.hasOwnProperty("website")) {
                         var website = $("<span></span>").append($("<a></a>").addClass("btn project_link").attr("href", project.website).text("Website"));
                         center.append(website);
+                    }
+
+                    if (project.hasOwnProperty("paper")) {
+                        var paper = $("<span></span>").append($("<a></a>").addClass("btn project_link").attr("href", project.paper).text("Paper"));
+                        center.append(paper);
                     }
 
                     var github = $("<span></span>").append($("<a></a>").addClass("btn project_link").attr("href", project.github).text("Github"));
