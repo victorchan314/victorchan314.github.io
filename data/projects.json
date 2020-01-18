@@ -58,6 +58,86 @@
             "languages": [
                 "JavaScript"
             ]
+        },
+        {
+            "name": "Dead Man's Switch",
+            "image_path": "img/dms.png",
+            "github": "https://github.com/victorchan314/dms",
+            "text": [
+                "Developed for CalHacks 2017, Dead Man's Switch is a safety mobile application. Users can set alarms that notify emergency contacts if they are not dismissed in time by the user."
+            ],
+            "languages": [
+                "JavaScript", "Node.JS"
+            ],
+            "tools": [
+                "React Native",
+                "Expo API",
+                "SparkPost API"
+            ]
+        },
+        {
+            "name": "Equation Parser",
+            "github": "https://github.com/victorchan314/eqp",
+            "text": [
+                "An equation parser based on Reverse Polish notation."
+            ],
+            "languages": [
+                "Java"
+            ]
+        },
+        {
+            "name": "Image Averager",
+            "image_path": "img/img_averager.png",
+            "github": "https://github.com/victorchan314/ImAvg/tree/master/src",
+            "text": [
+                "Inspired by Google Image loading screens and Android contact background colors, Image Averager converts input images into monochrome images of the average color."
+            ],
+            "languages": [
+                "Java"
+            ]
+        },
+        {
+            "name": "TaylordImages",
+            "image_path": "img/taylord_images.png",
+            "github": "https://github.com/victorchan314/Taylored_Images",
+            "text": [
+                "A semi-joke Chrome Extension that replaces all images on a webpage with similarly-proportioned pictures of Taylor Swift."
+            ],
+            "languages": [
+                "JavaScript"
+            ],
+            "tools": [
+                "Google Custom Search API"
+            ]
+        },
+        {
+            "name": "Ca1",
+            "image_path": "img/ca1.png",
+            "github": "https://github.com/victorchan314/Ca1",
+            "text": [
+                "A joke Chrome Extension that replaces any mention of UC Berkeley with \"The Number One Public University in the World.\""
+            ],
+            "languages": [
+                "JavaScript"
+            ]
+        },
+        {
+            "name" : "Twitter Sentiment Map",
+            "image_path": "img/twitter_sentiment_map.jpg",
+            "github": "https://github.com/alinxie/Twitter-Sentiment-Map",
+            "text": [
+                "Developed for CalHacks 2016, the Twitter Sentiment Map uses k-means clustering and sentiment scores from IBM Watson to plot the emotional distribution of the US on a map."
+            ],
+            "languages": [
+                "Python"
+            ],
+            "tools": [
+                "TwitterAPI",
+                "IBM Watson",
+                "scikit-learn",
+                "Flask",
+                "Jinja"
+            ]
         }
     ]
 }

@@ -16,6 +16,11 @@ div.project_text {
     width: 100%;
 }
 
+.project_img.vertical_scale {
+    height: 600px;
+    width: auto;
+}
+
 .project_title {
     margin-top: 40px;
     margin-bottom: 40px;
