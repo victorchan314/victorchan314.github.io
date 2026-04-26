@@ -2,7 +2,7 @@
     "projects": [
         {
             "name": "Analyzing Policy Distillation on Multi-Task Learning and Meta-Reinforcement Learning in Meta-World",
-            "paper": "/files/analyzing_policy_distillation.pdf",
+            "paper": "/files/policy_distillation.pdf",
             "github": "https://github.com/victorchan314/cs285-final-project",
             "text": [
                 "This paper applied Divide-and-Conquer, a recent policy distillation algorithm, on Meta-World multi-task and meta-reinforcement learning benchmarks. We achieved state-of-the-art results with the MT-10 benchmark."
